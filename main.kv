@@ -1,0 +1,39 @@
+
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Login'
+        TextInput:
+            id: username_input
+            hint_text: 'Username'
+            multiline: False
+        TextInput:
+            id: password_input
+            hint_text: 'Password'
+            password: True
+            multiline: False
+        Button:
+            text: 'Login'
+            on_press: root.login(self)
+
+<BuySellScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Sell an Item'
+        TextInput:
+            id: price_input
+            hint_text: 'Price'
+            multiline: False
+        TextInput:
+            id: image_input
+            hint_text: 'Image URL'
+            multiline: False
+        TextInput:
+            id: description_input
+            hint_text: 'Description'
+            multiline: True
+        Button:
+            text: 'Sell'
+            on_press: root.sell(self)
